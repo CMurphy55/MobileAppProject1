@@ -4,7 +4,7 @@ import mu.KotlinLogging
 import app.dev.equipment.console.models.EquipmentModel
 import app.dev.equipment.console.models.EquipmentJSONStore
 import app.dev.equipment.console.views.EquipmentView
-import com.github.mm.coloredconsole.colored
+import com.github.mm.coloredconsole.colored //references the 'ColoredConsole.kt' console file so that I can add colours to text
 
 
 class EquipmentController {
@@ -30,7 +30,7 @@ class EquipmentController {
                 3 -> list()
                 4 -> search()
                 5 -> delete()
-                6 -> dummyData()
+                6 -> dummyData() //dummy data function press 6
 
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
@@ -103,7 +103,7 @@ class EquipmentController {
         equipments.create(EquipmentModel(title= "Swiss Army Knife", description = "Multi-purpose tool"))
         equipments.create(EquipmentModel(title = "Water bottle", description = "Holds 750ml of liquid"))
         colored {
-            println("Sample data has been added".cyan.italic)
+            println("Sample data has been added".cyan.italic) //I wrapped this print statement in a coloured function which coloured whatever is in this print line statement cyan with italic formatting.
         }
     }
 

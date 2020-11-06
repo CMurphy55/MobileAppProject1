@@ -2,7 +2,7 @@ package app.dev.equipment.console.views
 
 import app.dev.equipment.console.models.EquipmentJSONStore
 import app.dev.equipment.console.models.EquipmentModel
-import com.github.mm.coloredconsole.colored
+import com.github.mm.coloredconsole.colored //referencing 'ColoredConsole.kt'
 
 
 class EquipmentView {
@@ -11,7 +11,7 @@ class EquipmentView {
 
         var option : Int
         var input: String?
-colored{
+colored{ //I've wrapped these print statement in a colored function which allows me to add colours and styles to these print statements
         println("MAIN MENU".black.italic)
         println(" 1. Add Equipment".red.bold)
         println(" 2. Update Equipment".blue.bold)
@@ -19,7 +19,7 @@ colored{
         println(" 4. Search Equipments".purple.bold)
         println(" 5. Delete Equipment".black.bold)
         println(" 6. Dummy Equipment".yellow.bold)
-        println("-1. Exit".cyan.italic)
+        println("-1. Exit".cyan.italic) //cyan colour| italic style
         println()
         print("Enter Option : ")
 }

@@ -35,30 +35,7 @@ class MenuScreen : View("Equipment Main Menu") {
 
                 }
             }
-            text("")
-            button("Update Equipments") {
 
-                isDefaultButton = true
-                useMaxWidth = true
-                action {
-                    runAsyncWithProgress {
-                        equipmentUIController.loadListScreen()
-                    }
-
-                }
-            }
-            text("")
-            button("Delete Equipments") {
-
-                isDefaultButton = true
-                useMaxWidth = true
-                action {
-                    runAsyncWithProgress {
-                        equipmentUIController.loadListScreen()
-                    }
-
-                }
-            }
             text("")
             button("Exit") {
 

@@ -29,7 +29,7 @@ class EquipmentController {
                 3 -> list()
                 4 -> search()
                 5 -> delete()
-                -99 -> dummyData()
+
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -97,9 +97,5 @@ class EquipmentController {
         return foundEquipment
     }
 
-    fun dummyData() {
-        equipments.create(EquipmentModel(title = "New York New York", description = "So Good They Named It Twice"))
-        equipments.create(EquipmentModel(title= "Ring of Kerry", description = "Some place in the Kingdom"))
-        equipments.create(EquipmentModel(title = "Waterford City", description = "You get great Blaas Here!!"))
-    }
+
 }

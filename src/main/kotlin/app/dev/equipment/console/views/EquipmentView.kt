@@ -2,6 +2,7 @@ package app.dev.equipment.console.views
 
 import app.dev.equipment.console.models.EquipmentJSONStore
 import app.dev.equipment.console.models.EquipmentModel
+import com.github.mm.coloredconsole.colored
 
 
 class EquipmentView {
@@ -10,16 +11,17 @@ class EquipmentView {
 
         var option : Int
         var input: String?
-
-        println("MAIN MENU")
-        println(" 1. Add Equipment")
-        println(" 2. Update Equipment")
-        println(" 3. List All Equipments")
-        println(" 4. Search Equipments")
-        println(" 5. Delete Equipment")
-        println("-1. Exit")
+colored{
+        println("MAIN MENU".black.italic)
+        println(" 1. Add Equipment".red.bold)
+        println(" 2. Update Equipment".blue.bold)
+        println(" 3. List All Equipments".green.bold)
+        println(" 4. Search Equipments".white.bold)
+        println(" 5. Delete Equipment".black.bold)
+        println("-1. Exit".cyan.italic)
         println()
         print("Enter Option : ")
+}
         input = readLine()!!
         option = if (input.toIntOrNull() != null && !input.isEmpty())
             input.toInt()

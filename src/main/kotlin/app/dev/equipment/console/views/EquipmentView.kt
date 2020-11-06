@@ -16,8 +16,9 @@ colored{
         println(" 1. Add Equipment".red.bold)
         println(" 2. Update Equipment".blue.bold)
         println(" 3. List All Equipments".green.bold)
-        println(" 4. Search Equipments".white.bold)
+        println(" 4. Search Equipments".purple.bold)
         println(" 5. Delete Equipment".black.bold)
+        println(" 6. Dummy Equipment".yellow.bold)
         println("-1. Exit".cyan.italic)
         println()
         print("Enter Option : ")
@@ -54,6 +55,7 @@ colored{
 
         return equipment.title.isNotEmpty() && equipment.description.isNotEmpty()
     }
+
 
     fun updateEquipmentData(equipment : EquipmentModel) : Boolean {
 

@@ -4,6 +4,7 @@ import mu.KotlinLogging
 import app.dev.equipment.console.models.EquipmentModel
 import app.dev.equipment.console.models.EquipmentJSONStore
 import app.dev.equipment.console.views.EquipmentView
+import com.github.mm.coloredconsole.colored
 
 
 class EquipmentController {
@@ -29,6 +30,7 @@ class EquipmentController {
                 3 -> list()
                 4 -> search()
                 5 -> delete()
+                6 -> dummyData()
 
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
@@ -95,6 +97,14 @@ class EquipmentController {
     fun search(id: Long) : EquipmentModel? {
         var foundEquipment = equipments.findOne(id)
         return foundEquipment
+    }
+    fun dummyData() {
+        equipments.create(EquipmentModel(title = "Rucksack", description = "Stores essential items"))
+        equipments.create(EquipmentModel(title= "Swiss Army Knife", description = "Multi-purpose tool"))
+        equipments.create(EquipmentModel(title = "Water bottle", description = "Holds 750ml of liquid"))
+        colored {
+            println("Sample data has been added".cyan.italic)
+        }
     }
 
 
